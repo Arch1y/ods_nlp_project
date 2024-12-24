@@ -49,28 +49,23 @@ def make_prompt(data, example_indices_full, example_index_to_summarize):
 def make_prompt_final(data, example_indices_full, example_index_to_summarize):
     prompt = ''
     for index in example_indices_full:
-        dialogue = data['dialog'][index]
+        # dialogue = data['dialog'][index]
         summary = data['summary'][index]
 
         prompt += f"""
-Диалог:
-
-{dialogue}
-
-Какие задачи и сроки их выполенения дали каждому участнику диалога? Напиши ответ в формате JSON
+Пример сокращенного диалога:
 {summary}
-
-
 """
     
     dialogue = data['dialog'][example_index_to_summarize]
     
     prompt += f"""
-Диалог:
+Диалог для сокращения:
 
 {dialogue}
 
-Какие задачи и сроки их выполенения дали каждому участнику диалога? Напиши ответ в формате JSON
+Перепишите диалог, сократив его до короткого списка с ключевыми задачами и сроками, без добавления дополнительных комментариевю.
+В твоем сокращенном тексте обязательно должны быть слова "Имя работника", "задача" и "срок", как в примере.
 """
         
     return prompt

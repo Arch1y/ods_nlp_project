@@ -9,10 +9,13 @@ def get_predicts_hf(pipe, message, max_new_tokens=512):
         print('Error')
         return None
 
-def get_predicts_ollama(model_name, message):
-    try:
-        res: ChatResponse = chat(model_name, message)
+def get_predicts_ollama(model_name, message, options=None):
+    # try:
+        if options is not None:
+            res: ChatResponse = chat(model_name, message, options)
+        else:
+            res: ChatResponse = chat(model_name, message)
         return res['message']['content']
-    except:
-        print('Error')
+    # except:
+    #     print('Error')
         return None
