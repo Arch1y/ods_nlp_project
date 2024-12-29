@@ -17,18 +17,30 @@ The project aims to develop a system for summarizing real automatic speech recog
 
 The `main.ipynb` notebook is organized into several sections:
 
-1. Importing necessary libraries and utilities.
-2. Data loading and preprocessing.
-3. Model inference for different models and prompt strategies.
-4. Metrics calculation and comparison.
-5. Results analysis and visualization.
+1. **Importing Libraries**: The notebook starts by importing necessary libraries and custom modules.
+
+2. **Data Loading**: It loads the rudialogsum-v2 dataset and a custom synthetic dataset.
+
+3. **Model Inference**: 
+   - Implements inference for multiple LLM models (Cotype, T-lite, T-pro) using both 0-shot and 1-shot strategies.
+   - Utilizes the `inference_model` module for model-specific inference functions.
+
+4. **Metrics Calculation**: 
+   - Calculates various evaluation metrics (ROUGE, BLEU, METEOR, BERTScore) using the `metrics` module.
+   - Compares performance across different models and strategies.
+
+5. **Synthetic Dataset Processing**: 
+   - Includes code for processing a custom synthetic dataset.
+   - Implements a modified 1-shot strategy for longer meeting transcripts.
+
+6. **Results Analysis**: 
+   - Saves predictions and metrics for further analysis.
+   - Provides examples of generated summaries for comparison.
+
+The notebook uses a modular approach, with custom functions in separate modules (`utils`, `metrics`, `inference_model`) to handle data processing, model inference, and metric calculation.
 
 ## How to Use
 
-1. Clone the repository.
-2. Install required dependencies (listed in the notebook).
-3. Run the notebook cell by cell to reproduce the results.
-4. Modify parameters and models as needed for further experimentation.
 
 ## Results
 
