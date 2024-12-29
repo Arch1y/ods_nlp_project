@@ -39,8 +39,6 @@ The `main.ipynb` notebook is organized into several sections:
 
 The notebook uses a modular approach, with custom functions in separate modules (`utils`, `metrics`, `inference_model`) to handle data processing, model inference, and metric calculation.
 
-## How to Use
-
 
 ## Results
 
