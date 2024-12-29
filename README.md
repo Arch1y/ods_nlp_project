@@ -56,4 +56,4 @@ The project finds that the T-lite-it-1.0-Q8-GGUF model, operating in a one-shot 
 
 This project was conducted by Zakharov Artem, Abramenko Ilya, and Zhavoronkov Alexander as part of their research on LLM applications in natural language processing.
 
-For more details and the full research paper, please refer to the project repository: https://github.com/Arch1y/ods_nlp_project
+For more details and the full research paper, please refer to the file: https://github.com/Arch1y/ods_nlp_project/science_report.pdf
